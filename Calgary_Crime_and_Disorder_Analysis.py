@@ -24,8 +24,6 @@ Disorder_by_Community = Disorder['Community Name'].value_counts()
 Disorder_by_Year = Disorder['Year'].value_counts()
 Disorder_by_Month = Disorder['Month'].value_counts()
 
-#print(Crime_and_Disorder_by_Community[:20],Crime_by_Community[:20],Crime_by_Year,Crime_by_Month,Disorder_by_Community[:20],Disorder_by_Year,Disorder_by_Month)
-
 def func1(dataframe,grouping_variable, num):
 
     common_for_each_grouping_variable = dataframe.groupby(grouping_variable).Category.value_counts()
@@ -44,3 +42,10 @@ func1(Disorder, 'Month', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Sc
 func1(Crime, 'Community Name', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Crime_for_each_Calgary_Community(2012-2019).csv', index = False)
 func1(Crime, 'Year', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Crime_for_each_Year.csv', index = False)
 func1(Crime, 'Month', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Crime_for_each_Month(2012-2019).csv', index = False)
+Crime_and_Disorder_by_Community.to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Number_of_Total_Crimes_ and_Disorders_per_Community(2012-2019).csv')
+Crime_by_Community.to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Number_of_Total_Crimes_per_Community(2012-2019).csv')
+Crime_by_Year.to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Number_of_Total_Crimes_per_Year.csv')
+Crime_by_Month.to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Number_of_Total_Crimes_per_Month(2012-2019).csv')
+Disorder_by_Community.to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Number_of_Total_Disorders_per_Community(2012-2019).csv')
+Disorder_by_Year.to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Number_of_Total_Disorders_per_Year.csv')
+Disorder_by_Month.to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Number_of_Total_Disorders_per_Month(2012-2019).csv')
