@@ -16,6 +16,7 @@ Crime_and_Disorder['Date'] = Crime_and_Disorder['Date'].str[-2:]
 Crime = Crime_and_Disorder[Crime_and_Disorder['Group Category'] == 'Crime']
 Disorder = Crime_and_Disorder[Crime_and_Disorder['Group Category'] == 'Disorder']
 
+#Getting the total number of the variable defined. I.e, Total_Numer of Crime and disorder by Community
 Crime_and_Disorder_by_Community = Crime_and_Disorder['Community Name'].value_counts()
 Crime_by_Community = Crime['Community Name'].value_counts()
 Crime_by_Year = Crime['Year'].value_counts()
@@ -24,6 +25,7 @@ Disorder_by_Community = Disorder['Community Name'].value_counts()
 Disorder_by_Year = Disorder['Year'].value_counts()
 Disorder_by_Month = Disorder['Month'].value_counts()
 
+#A function which takes in a dataframe, string, and integer as parameters. It returns the most common crimes based on the grouping variable
 def func1(dataframe,grouping_variable, num):
 
     common_for_each_grouping_variable = dataframe.groupby(grouping_variable).Category.value_counts()
@@ -36,6 +38,7 @@ def func1(dataframe,grouping_variable, num):
 
     return Most_common_crime_per_grouping_variable
 
+#Exporting the Dataframes and Series as csv Files
 func1(Disorder, 'Community Name', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Disorder_for_each_Calgary_Community(2012-2019).csv', index = False)
 func1(Disorder, 'Year', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Disorder_for_each_Year.csv', index = False)
 func1(Disorder, 'Month', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Disorder_for_each_Month(2012-2019).csv', index = False)
