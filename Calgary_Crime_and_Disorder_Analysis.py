@@ -24,7 +24,7 @@ Disorder_by_Community = Disorder['Community Name'].value_counts()
 Disorder_by_Year = Disorder['Year'].value_counts()
 Disorder_by_Month = Disorder['Month'].value_counts()
 
-print(Crime_and_Disorder_by_Community[:20],Crime_by_Community[:20],Crime_by_Year,Crime_by_Month,Disorder_by_Community[:20],Disorder_by_Year,Disorder_by_Month)
+#print(Crime_and_Disorder_by_Community[:20],Crime_by_Community[:20],Crime_by_Year,Crime_by_Month,Disorder_by_Community[:20],Disorder_by_Year,Disorder_by_Month)
 
 def func1(dataframe,grouping_variable, num):
 
@@ -38,6 +38,10 @@ def func1(dataframe,grouping_variable, num):
 
     return Most_common_crime_per_grouping_variable
 
-print(func1(Disorder, 'Community Name', 1), func1(Disorder, 'Year', 1), func1(Disorder, 'Month', 1), func1(Crime, 'Community Name', 1), func1(Crime, 'Year', 1), func1(Crime, 'Month', 1))
+#print(, func1(Disorder, 'Year', 1), func1(Disorder, 'Month', 1), func1(Crime, 'Community Name', 1), func1(Crime, 'Year', 1), func1(Crime, 'Month', 1))
 
-print(Crime['Category'].value_counts(), Disorder['Category'].value_counts(), Crime['Date'].value_counts(), Disorder['Date'].value_counts())
+#print(Crime['Category'].value_counts(), Disorder['Category'].value_counts(), Crime['Date'].value_counts(), Disorder['Date'].value_counts())
+
+print(type(Crime['Category'].value_counts()))
+
+func1(Disorder, 'Community Name', 1).to_csv('Most_Common_Disorder_for_each_Calgary_Community', index = False)
