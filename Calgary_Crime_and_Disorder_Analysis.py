@@ -38,10 +38,9 @@ def func1(dataframe,grouping_variable, num):
 
     return Most_common_crime_per_grouping_variable
 
-#print(, func1(Disorder, 'Year', 1), func1(Disorder, 'Month', 1), func1(Crime, 'Community Name', 1), func1(Crime, 'Year', 1), func1(Crime, 'Month', 1))
-
-#print(Crime['Category'].value_counts(), Disorder['Category'].value_counts(), Crime['Date'].value_counts(), Disorder['Date'].value_counts())
-
-print(type(Crime['Category'].value_counts()))
-
-func1(Disorder, 'Community Name', 1).to_csv('Most_Common_Disorder_for_each_Calgary_Community', index = False)
+func1(Disorder, 'Community Name', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Disorder_for_each_Calgary_Community(2012-2019).csv', index = False)
+func1(Disorder, 'Year', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Disorder_for_each_Year.csv', index = False)
+func1(Disorder, 'Month', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Disorder_for_each_Month(2012-2019).csv', index = False)
+func1(Crime, 'Community Name', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Crime_for_each_Calgary_Community(2012-2019).csv', index = False)
+func1(Crime, 'Year', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Crime_for_each_Year.csv', index = False)
+func1(Crime, 'Month', 1).to_csv(r'C:\Users\HEATPACK_OLLIE\Desktop\Computer Science\Data Science\Git Repositories\CPS_Project\Most_Common_Crime_for_each_Month(2012-2019).csv', index = False)
